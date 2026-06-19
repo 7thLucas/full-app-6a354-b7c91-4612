@@ -1,0 +1,36 @@
+<style>
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait .sl-layout { flex-direction: column; }
+  .mode-landscape .sl-left { width: 55%; }
+  .mode-landscape .sl-right { width: 45%; }
+  .mode-portrait .sl-left { width: 100%; flex: 1; }
+  .mode-portrait .sl-right { width: 100%; min-height: 40%; }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- Left: editorial content -->
+    <div class="sl-left flex flex-col justify-between p-12">
+      <div>
+        <span class="inline-flex items-center px-3 py-1 bg-indigo-50 text-indigo-600 text-xs font-bold tracking-widest uppercase rounded-full mb-10">Browser Game</span>
+        <h1 class="text-6xl font-black text-slate-900 leading-none mb-6">
+          Play.<br/>Win.<br/>Repeat.
+        </h1>
+        <p class="text-xl text-slate-500 leading-relaxed max-w-xs">
+          Classic Tic Tac Toe — instantly playable in your browser. No downloads, no accounts, no friction.
+        </p>
+      </div>
+      <data-attribution />
+    </div>
+
+    <!-- Right: full-bleed visual -->
+    <div class="sl-right bg-indigo-600 relative overflow-hidden">
+      <img
+        src="http://localhost:8001/common/image-generation?prompt=minimalist+tic+tac+toe+board+bold+X+and+O+white+lines+clean+dark+indigo+background+geometric+game+art+editorial+flat+design"
+        class="w-full h-full object-cover"
+        alt="Tic Tac Toe board"
+      />
+    </div>
+
+  </div>
+</section>
